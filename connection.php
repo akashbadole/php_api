@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 
 // echo "this is my c0nnection";
 // getting db credentials

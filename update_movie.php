@@ -40,4 +40,12 @@ if(isset($_POST['id']) && isset($_POST['storyline']) && isset($_POST['stars']) &
 
 echo json_encode($response);
 
+
+
+// <!-- as a backend developer using html is not proper method
+// 1. end point -> /update_movie.php
+// 2. request type : $_POST
+// 3. id, storyline, box office, and stars
+//  -->
 ?>
+
