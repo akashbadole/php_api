@@ -35,6 +35,8 @@ if(isset($_GET['title'])){
 		$response['error']=false;
 		$response['movie']=$movie;
 		$response['message']='movie has been returned successfully';
+		$response['response_code']=200; // success response code
+
 
 	}else{
 		//failure
@@ -47,6 +49,8 @@ if(isset($_GET['title'])){
 //no movie title was provided, we cannot get the movie
 $response['error']=true;
 $response['message']="please provide movie title";
+$response['response_code']=400; // failure response code
+
 }
 
 echo json_encode($response);

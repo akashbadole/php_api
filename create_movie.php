@@ -37,6 +37,7 @@ if(isset($_POST['title']) && isset($_POST['storyline']) && isset($_POST['lang'])
 
 			$response['error']=false;
 			$response['message']="Movie inserted successfully";
+			$response['response_code']=201; // created - success
 
 			$stmt->close();
 
@@ -51,6 +52,7 @@ if(isset($_POST['title']) && isset($_POST['storyline']) && isset($_POST['lang'])
 // we cannot insert a movies that doesnt have all of this info
 	$response['error']=true;
 	$response['message']="Please provide all parameters";
+	$response['response_code']=400; // Failure response code
 
 }
 

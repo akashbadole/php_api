@@ -28,12 +28,16 @@ $movies[] = $row;
 $response['error'] = false; // this is no error
 $response['movies'] = $movies; 
 $response['message'] = "movies return successfully";
+$response['response_code']=200; // success response code
+
+
 $stmt->close();
 
 }else{
 // we have an error
 $response['error']=true;
 $response['message']="could not execute query ...";
+$response['response_code']=400; // failure response code
 
 
 

@@ -17,10 +17,14 @@ if( isset($_POST['id']) ){
 		//success
 		$response['error']=false;
 		$response['message']="movie deleted successfully";
+		$response['response_code']=204; // no content but success response code
+
 	}else{
 		//failure
 		$response['error']=true;
 		$response['message']="movie data not remove";
+		$response['response_code']=400; // failure response code
+
 
 	}
 
